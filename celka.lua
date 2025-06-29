@@ -51,11 +51,11 @@ local ru_trashtalk = {
     {'съебал нахуй, шнырь большедырый', 'легкий хуесос'},
     {'если бы кизару увидел твой ник он бы спросил что это за таджик'},
     {'все что ты делал на хвх это легендарно сосал'},
-    {'иди прикупи sexcord а то падаешь', 'ссылку кинуть?'},
+    {'иди прикупи nyctophobia а то падаешь', 'ссылку кинуть?'},
     {'хпахпахахахаха', 'ебать я тебе запромежбулил'},
     {'твоя сука носит спид моя сука харли квин'},
-    {'бай sexcord уебище', 'иди прикупи'},
-    {'S E X C O R D', 'лучшая луашка на скит'},
+    {'бай Nyctophobia уебище', 'иди прикупи'},
+    {'N Y C T O P H O B I A', 'лучшая луашка на скит'},
     {'1.', 'ебаный уебок'},
     {'1', 'шлюха'},
     {'t1', 'пидорас ебаный'},
@@ -71,12 +71,12 @@ local ru_trashtalk = {
     {'Упал?', 'Привыкай.'},
     {'[f[f[f[f]]]]', ' ебал твою мать'},
     {'1 хуесос'},
-    {'S E X C O R D или ничего'},
+    {'N Y C T O P H O B I A или ничего'},
     {'пошла нахуй шалава ебаная'},
     {'твоя мамочка ударилась темечком об мой стол от такого кила'},
     {'1ю'},
     {'ну ты и хуесос'},
-    {'S E X C O R D'},
+    {'N Y C T O P H O B I A'},
     {'твои джитеры жирнее сраки твоей мамаши'},
 }
 
@@ -149,26 +149,20 @@ local name = ''
 local update_info = '11/05/25'
 
 if _USER_NAME == nil then
-    name = 'admin'
+    name = 'DEVELOPER'
 else
     name = _USER_NAME
 end
 
-local build = 'debug'
+local build = 'DEVELOPER'
 local brand = [[
-███████╗███████╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ██████╗ 
-██╔════╝██╔════╝╚██╗██╔╝██╔════╝██╔═══██╗██╔══██╗██╔══██╗
-███████╗█████╗   ╚███╔╝ ██║     ██║   ██║██████╔╝██║  ██║
-╚════██║██╔══╝   ██╔██╗ ██║     ██║   ██║██╔══██╗██║  ██║
-███████║███████╗██╔╝ ██╗╚██████╗╚██████╔╝██║  ██║██████╔╝
-╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ 
 ]]
 
 client.exec('clear')
 client.color_log(200, 180, 100, ' ')
 client.color_log(200, 180, 100, brand)
 client.color_log(200, 180, 100, ' ')
-client.color_log(200, 180, 100, 'Welcome to SexCord, ', name, '! Your branch is '..build)
+client.color_log(200, 180, 100, 'Welcome to NYCTOPHOBIA, ', name, '! Your branch is '..build)
 
 states = {'Shared', 'Standing', 'Running', 'Walking' , 'Aerobic', 'Aerobic+', 'Ducking', 'Sneaking'}
 
@@ -194,9 +188,9 @@ libs.pui.macros.dot = '\a'..get_skeet_color()..'•  \r'
 
 local lua_ui = {
     main = {
-        main_checkbox = groups.group_fl:checkbox('\v•\a'..get_skeet_color()..'  Enable SexCord'),
+        main_checkbox = groups.group_fl:checkbox('\v•\a'..get_skeet_color()..'  Enable Nyctophobia'),
         tab_selectable = groups.group_fl:combobox('\v•\r  Tab Selectable', {'Ragebot', 'Anti-Aims', 'Visuals', 'Misc'}),
-        label1 = groups.group_fl:label('\v•\r  Welcome to \a'..get_skeet_color()..'SexCord\r '..build..', '..name),
+        label1 = groups.group_fl:label('\v•\r  Welcome to \a'..get_skeet_color()..'Nyctophobia\r '..build..', '..name),
         label2 = groups.group_fl:label('\v•\r  Last update: '..update_info),
     },
     ragebot = {
@@ -213,10 +207,10 @@ local lua_ui = {
         auto_tp = groups.group_aa:checkbox('\v•\r  Automatic Teleport'),
         auto_tp_key = groups.group_aa:hotkey('\v•\r  Automatic Teleport', true),
         ragebot_label9 = groups.group_aa:label(' '),
-        resolver = groups.group_aa:checkbox('\v•\r  SeX Resolver [\aEC3F3FFFdebug\r]'),
+        resolver = groups.group_aa:checkbox('\v•\r  NyC Resolver [\aEC3F3FFFdebug\r]'),
         resolver_type = groups.group_aa:combobox('\v•\r  Type', {'Default', '???'}),
         ragebot_label4 = groups.group_aa:label(' '),
-        prediction_system = groups.group_aa:checkbox('\v•\r  SeX Prediction System [\aEC3F3FFFdebug\r]'),
+        prediction_system = groups.group_aa:checkbox('\v•\r  Nyc Prediction System [\aEC3F3FFFdebug\r]'),
         predict_label = groups.group_aa:label('\aEC3F3FFF USE THIS IF YOUR PING < 40'),
         predict_type = groups.group_aa:combobox('\v•\r  Type', {'Default', 'Oh god please no'}),
         predict_label2 = groups.group_aa:label('\aEC3F3FFF use that mode if your ping < 20'),
@@ -245,7 +239,7 @@ local lua_ui = {
         defensive_flick_key = groups.group_aa:hotkey('\v•\r  Flick Exploit Bind'),
         aa_label6 = groups.group_aa:label(' '),
         fake_lags = groups.group_aa:checkbox('\v•\r  Fake-Lags'),
-        fake_lags_amount = groups.group_aa:combobox('\v•\r  Type', {'Maximum', 'Dynamic', 'Fluctuate', 'SexCord'}),
+        fake_lags_amount = groups.group_aa:combobox('\v•\r  Type', {'Maximum', 'Dynamic', 'Fluctuate', 'Nyctophobia'}),
         fake_lags_limit = groups.group_aa:slider('\v•\r  Limit', 1, 15, 1),
         fake_lags_variance = groups.group_aa:slider('\v•\r  Variance', 0, 100, 0),
         aa_label7 = groups.group_aa:label(' '),
@@ -1087,7 +1081,7 @@ local function aa_setup(cmd)
         else
             ui.set(ref.flEnabled[1], true)
             ui.set(ref.flEnabled[2], 'Always On')
-            if lua_ui.antiaim_misc.fake_lags_amount:get() == 'SexCord' then
+            if lua_ui.antiaim_misc.fake_lags_amount:get() == 'Nyctophobia' then
 
                 ui.set(ref.flAmount, 'Maximum')
                 ui.set(ref.flLimit, math.random(13, 15))
@@ -1258,11 +1252,11 @@ buttom_export = groups.group_fl:button('Export Config', function()
     config.export()
 end):depend(enabled)
 
-buttom_sex = groups.group_fl:button('\a'..get_skeet_color()..'SeX Preset [\aEC3F3FFFdebug\r]', function() 
+buttom_sex = groups.group_fl:button('\a'..get_skeet_color()..'Nyc Preset [\aEC3F3FFFdebug\r]', function() 
     config.import('W3sicHJlZGljdF9iaW5kIjpbMSwxNywifiJdLCJhaXJzdG9wIjpbMSwwLCJ+Il0sInVuc2FmZV9jaGFyZ2UiOnRydWUsInJlc29sdmVyIjpmYWxzZSwicHJlZGljdGlvbl9zeXN0ZW0iOmZhbHNlLCJwcmVkaWN0X3dlYXBvbnMiOlsiQVdQIiwiQXV0byIsIlNjb3V0IiwifiJdLCJoaWRlc2hvdF9maXgiOmZhbHNlLCJhdXRvX3RwIjpmYWxzZSwicHJlZGljdF9jb25kaXRpb25zIjpbIlN0YW5kaW5nIiwiV2Fsa2luZyIsIkR1Y2tpbmciLCJTbmVha2luZyIsIn4iXSwiZGVmZW5zaXZlX2ZpeCI6ZmFsc2UsImFpcmxhZyI6ZmFsc2UsImF1dG9fdHBfa2V5IjpbMSwwLCJ+Il0sInByZWRpY3RfdHlwZSI6IkRlZmF1bHQiLCJyZXNvbHZlcl90eXBlIjoiPz8/In0seyJmYWtlX2xhZ3NfYW1vdW50IjoiU2V4Q29yZCIsImFkZG9ucyI6WyJXYXJtdXAgQW50aS1BaW0iLCJBbnRpIEJhY2tzdGFiIiwiU2FmZSBIZWFkIiwiRWRnZSBZYXcgb24gRkQiLCJ+Il0sIm1hbnVhbHNfbWFuaXB1bGF0aW9ucyI6WyJTdGF0aWMiLCJ+Il0sImtleV9sZWZ0IjpbMSw5MCwifiJdLCJkZWZlbnNpdmVfZmxpY2tfdHlwZSI6IkxlZnQiLCJmYWtlX2xhZ3MiOnRydWUsImtleV9mcmVlc3RhbmQiOlsxLDAsIn4iXSwieWF3X2Jhc2UiOiJBdCBUYXJnZXRzIiwiZmFrZV9sYWdzX2xpbWl0IjoxLCJkaXNhYmxlX2RlZmVuc2l2ZV9vbl9zYWZlIjpmYWxzZSwia2V5X2ZvcndhcmQiOlsxLDAsIn4iXSwiZGVmZW5zaXZlX2ZsaWNrX2tleSI6WzEsMCwifiJdLCJrZXlfcmlnaHQiOlsxLDg4LCJ+Il0sImZha2VfbGFnc192YXJpYW5jZSI6MCwiYWFfc2VsZWN0IjoiQnVpbGRlciIsImRlZmVuc2l2ZV9mbGlja192YWx1ZSI6MCwiZGVmZW5zaXZlX2ZsaWNrX3RpY2tzIjoxLCJzYWZlX2hlYWQiOlsiQWlyK0MgS25pZmUiLCJIaWdoZXIgdGhhbiBlbmVteSIsIn4iXSwiZGVmZW5zaXZlX2ZsaWNrIjpmYWxzZX0seyJicmFuZGVkX3dhdGVybWFya19wb3MiOiJCb3R0b20iLCJidXlfYm90X3ByaW1hcnkiOiJBV1AiLCJjcm9zc19pbmQiOnRydWUsImFuaW1hdGlvbiI6dHJ1ZSwibWFudWFsX2luZGljYXRvcnNfdHlwZSI6Ik1vZGVybiIsInRoaXJkX3BlcnNvbl92YWx1ZSI6NjksImZpbHRlcl9jb25zb2xlIjp0cnVlLCJidXlfYm90X290aGVyIjpbIktldmxhciIsIkhlbG1ldCIsIkRlZnVzZSBLaXQiLCJHcmVuYWRlIiwiTW9sb3RvdiIsIlNtb2tlIiwiVGFzZXIiLCJ+Il0sImtpbGxzYXkiOnRydWUsImJyYW5kZWRfd2F0ZXJtYXJrX3Bvc19jIjoiIzlCOTdGRkZGIiwiZmFzdF9sYWRkZXIiOnRydWUsImRlZmVuc2l2ZV9pbmRpY2F0b3IiOnRydWUsImFzcGVjdHJhdGlvIjp0cnVlLCJjcm9zc19pbmRfZ3JhZGllbnQiOmZhbHNlLCJmcHNfYm9vc3QiOnRydWUsIm1hbnVhbF9pbmRpY2F0b3JzIjp0cnVlLCJjbGFuX3RhZyI6dHJ1ZSwiaGl0bWFya2VyX3R5cGUiOiJDaXJjbGUiLCJtYW51YWxfaW5kaWNhdG9yc19jIjoiIzlCOTdGRkZGIiwiY3Jvc3NfaW5kX2MiOiIjOUI5N0ZGRkYiLCJoaXRtYXJrZXJfYyI6IiM5Qjk3RkZGRiIsImRlZmVuc2l2ZV9pbmRpY2F0b3JfYyI6IiM5Qjk3RkZGRiIsImhpdG1hcmtlciI6dHJ1ZSwibWFudWFsX2luZGljYXRvcnNfdmVsb2NpdHkiOnRydWUsInpldXNfd2FybmluZyI6dHJ1ZSwiYWltYm90X2xvZ3MiOnRydWUsImFuaW1hdGlvbl9haXIiOiJTdGF0aWMiLCJidXlfYm90X3NlY29uZGFyeSI6IkZpdmUtc2VuZU5cL1RlYzlcL0NaIiwiYnV5X2JvdCI6dHJ1ZSwiYXNwZWN0cmF0aW9fdmFsdWUiOjEyNSwiYW5pbWF0aW9uX2dyb3VuZCI6IlN0YXRpYyIsInRoaXJkX3BlcnNvbiI6dHJ1ZSwidmVsb2NpdHlfd2FybmluZ19jIjoiIzlCOTdGRkZGIiwibG9nX3R5cGUiOlsiSGl0IiwiTWlzcyIsIn4iXSwidmVsb2NpdHlfd2FybmluZyI6dHJ1ZX0sW3siZW5hYmxlIjpmYWxzZSwieWF3X3R5cGUiOiJTdGF0aWMiLCJtb2RfdHlwZSI6Ik9mZiIsImRlZmVuc2l2ZV95YXdfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlIjowLCJtb2RfZG1fbGVmdCI6MCwiZGVmZW5zaXZlX3lhd19kZWxheSI6NCwiZGVmZW5zaXZlIjpmYWxzZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiT2ZmIiwieWF3X2RlbGF5X3JhbmRvbSI6ZmFsc2UsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MSwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjowLCJ5YXdfcmlnaHQiOjAsInBpdGNoX3R5cGUiOiJEb3duIiwiZGVmZW5zaXZlX3BpdGNoX3NwZWVkIjoxLCJkZWZlbnNpdmVfcGl0Y2giOiJPZmYiLCJ5YXdfcmFuZG9tIjowLCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjowLCJ5YXdfZGVsYXkiOjQsInlhd19tb2RpZmVyX2RlbGF5X3JhbmRvbSI6ZmFsc2UsImppdHRlcl9kZWxheSI6NCwiZGVmZW5zaXZlX2FhX3NpbnVzX2FtcGxpdHVkZSI6MCwiZGVmZXNpdmVfYWFfdHlwZSI6Ik9mZiIsIm1vZF9kbSI6MCwiZ3NfYm9keV9zbGlkZXIiOjAsInBpdGNoX3ZhbHVlIjowLCJnc19ib2R5X3lhd190eXBlIjoiT2ZmIn0seyJlbmFibGUiOnRydWUsInlhd190eXBlIjoiTCAmIFIiLCJtb2RfdHlwZSI6IkNlbnRlciIsImRlZmVuc2l2ZV95YXdfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlIjowLCJtb2RfZG1fbGVmdCI6MCwiZGVmZW5zaXZlX3lhd19kZWxheSI6NCwiZGVmZW5zaXZlIjpmYWxzZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiT2ZmIiwieWF3X2RlbGF5X3JhbmRvbSI6ZmFsc2UsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MSwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjowLCJ5YXdfcmlnaHQiOjE0LCJwaXRjaF90eXBlIjoiRG93biIsImRlZmVuc2l2ZV9waXRjaF9zcGVlZCI6MSwiZGVmZW5zaXZlX3BpdGNoIjoiVXAiLCJ5YXdfcmFuZG9tIjoyNSwieWF3X3N0YXRpYyI6MCwiZGVmZW5zaXZlX3lhd19zcGVlZCI6MSwibW9kX2RtX3JpZ2h0IjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3lhdyI6Ik1ldGEiLCJkZWZlc2l2ZV9hYV9tb2RlIjoiQnVpbGRlciIsImRlZmVuc2l2ZV9waXRjaF9kZWxheSI6NCwieWF3X2xlZnQiOi0xMiwieWF3X2RlbGF5Ijo0LCJ5YXdfbW9kaWZlcl9kZWxheV9yYW5kb20iOmZhbHNlLCJqaXR0ZXJfZGVsYXkiOjQsImRlZmVuc2l2ZV9hYV9zaW51c19hbXBsaXR1ZGUiOjAsImRlZmVzaXZlX2FhX3R5cGUiOiJGb3JjZSIsIm1vZF9kbSI6MjUsImdzX2JvZHlfc2xpZGVyIjotMSwicGl0Y2hfdmFsdWUiOjAsImdzX2JvZHlfeWF3X3R5cGUiOiJKaXR0ZXIifSx7ImVuYWJsZSI6dHJ1ZSwieWF3X3R5cGUiOiJEZWxheSIsIm1vZF90eXBlIjoiNS1XYXkiLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzIiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZSI6MCwibW9kX2RtX2xlZnQiOjAsImRlZmVuc2l2ZV95YXdfZGVsYXkiOjQsImRlZmVuc2l2ZSI6ZmFsc2UsImRlZmVzaXZlX2FhX21vZGVfdHlwZSI6Ik9mZiIsInlhd19kZWxheV9yYW5kb20iOnRydWUsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MSwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjowLCJ5YXdfcmlnaHQiOjI3LCJwaXRjaF90eXBlIjoiRG93biIsImRlZmVuc2l2ZV9waXRjaF9zcGVlZCI6MSwiZGVmZW5zaXZlX3BpdGNoIjoiT2ZmIiwieWF3X3JhbmRvbSI6MCwieWF3X3N0YXRpYyI6MCwiZGVmZW5zaXZlX3lhd19zcGVlZCI6MSwibW9kX2RtX3JpZ2h0IjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3lhdyI6Ik9mZiIsImRlZmVzaXZlX2FhX21vZGUiOiJCdWlsZGVyIiwiZGVmZW5zaXZlX3BpdGNoX2RlbGF5Ijo0LCJ5YXdfbGVmdCI6LTIzLCJ5YXdfZGVsYXkiOjIsInlhd19tb2RpZmVyX2RlbGF5X3JhbmRvbSI6ZmFsc2UsImppdHRlcl9kZWxheSI6NCwiZGVmZW5zaXZlX2FhX3NpbnVzX2FtcGxpdHVkZSI6MCwiZGVmZXNpdmVfYWFfdHlwZSI6Ik9mZiIsIm1vZF9kbSI6MTYsImdzX2JvZHlfc2xpZGVyIjoxLCJwaXRjaF92YWx1ZSI6MCwiZ3NfYm9keV95YXdfdHlwZSI6IkppdHRlciJ9LHsiZW5hYmxlIjp0cnVlLCJ5YXdfdHlwZSI6IlN0YXRpYyIsIm1vZF90eXBlIjoiNS1XYXkiLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzIiOjEwLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWUiOjAsIm1vZF9kbV9sZWZ0IjowLCJkZWZlbnNpdmVfeWF3X2RlbGF5Ijo0LCJkZWZlbnNpdmUiOnRydWUsImRlZmVzaXZlX2FhX21vZGVfdHlwZSI6IlNpbnVzIiwieWF3X2RlbGF5X3JhbmRvbSI6ZmFsc2UsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjczLCJkZWZlbnNpdmVfYWFfc2ludXNfc3BlZWQiOjQsImRlZmVuc2l2ZV95YXdfdmFsdWVfMSI6LTEwLCJ5YXdfcmlnaHQiOjAsInBpdGNoX3R5cGUiOiJEb3duIiwiZGVmZW5zaXZlX3BpdGNoX3NwZWVkIjoxLCJkZWZlbnNpdmVfcGl0Y2giOiJEb3duIiwieWF3X3JhbmRvbSI6MCwieWF3X3N0YXRpYyI6LTcsImRlZmVuc2l2ZV95YXdfc3BlZWQiOjEsIm1vZF9kbV9yaWdodCI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlXzIiOjAsImRlZmVuc2l2ZV95YXciOiJKaXR0ZXIiLCJkZWZlc2l2ZV9hYV9tb2RlIjoiQnVpbGRlciIsImRlZmVuc2l2ZV9waXRjaF9kZWxheSI6NCwieWF3X2xlZnQiOjAsInlhd19kZWxheSI6NCwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjoxNDUsImRlZmVzaXZlX2FhX3R5cGUiOiJGb3JjZSIsIm1vZF9kbSI6LTQ2LCJnc19ib2R5X3NsaWRlciI6MSwicGl0Y2hfdmFsdWUiOjAsImdzX2JvZHlfeWF3X3R5cGUiOiJKaXR0ZXIifSx7ImVuYWJsZSI6dHJ1ZSwieWF3X3R5cGUiOiJEZWxheSIsIm1vZF90eXBlIjoiT2ZmIiwiZGVmZW5zaXZlX3lhd192YWx1ZV8yIjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWUiOjAsIm1vZF9kbV9sZWZ0IjowLCJkZWZlbnNpdmVfeWF3X2RlbGF5Ijo0LCJkZWZlbnNpdmUiOnRydWUsImRlZmVzaXZlX2FhX21vZGVfdHlwZSI6Ik9mZiIsInlhd19kZWxheV9yYW5kb20iOmZhbHNlLCJkZWZlbnNpdmVfYWFfc2ludXNfeWF3IjowLCJkZWZlbnNpdmVfYWFfc2ludXNfc3BlZWQiOjEsImRlZmVuc2l2ZV95YXdfdmFsdWVfMSI6MCwieWF3X3JpZ2h0IjozNCwicGl0Y2hfdHlwZSI6IkRvd24iLCJkZWZlbnNpdmVfcGl0Y2hfc3BlZWQiOjEsImRlZmVuc2l2ZV9waXRjaCI6Ik9mZiIsInlhd19yYW5kb20iOjE1LCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMzAsInlhd19kZWxheSI6MywieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJkZWZlc2l2ZV9hYV90eXBlIjoiRm9yY2UiLCJtb2RfZG0iOjAsImdzX2JvZHlfc2xpZGVyIjoxLCJwaXRjaF92YWx1ZSI6MCwiZ3NfYm9keV95YXdfdHlwZSI6IkppdHRlciJ9LHsiZW5hYmxlIjp0cnVlLCJ5YXdfdHlwZSI6IkRlbGF5IiwibW9kX3R5cGUiOiJDZW50ZXIiLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzIiOjMsImRlZmVuc2l2ZV9waXRjaF92YWx1ZSI6MCwibW9kX2RtX2xlZnQiOjAsImRlZmVuc2l2ZV95YXdfZGVsYXkiOjQsImRlZmVuc2l2ZSI6dHJ1ZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiU2ludXMiLCJ5YXdfZGVsYXlfcmFuZG9tIjpmYWxzZSwiZGVmZW5zaXZlX2FhX3NpbnVzX3lhdyI6LTEwNiwiZGVmZW5zaXZlX2FhX3NpbnVzX3NwZWVkIjo2LCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzEiOi03LCJ5YXdfcmlnaHQiOjMyLCJwaXRjaF90eXBlIjoiRG93biIsImRlZmVuc2l2ZV9waXRjaF9zcGVlZCI6MSwiZGVmZW5zaXZlX3BpdGNoIjoiRG93biIsInlhd19yYW5kb20iOjM0LCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiSml0dGVyIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMjgsInlhd19kZWxheSI6MiwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjo5MiwiZGVmZXNpdmVfYWFfdHlwZSI6IkZvcmNlIiwibW9kX2RtIjoxOSwiZ3NfYm9keV9zbGlkZXIiOi0xLCJwaXRjaF92YWx1ZSI6MCwiZ3NfYm9keV95YXdfdHlwZSI6IkppdHRlciJ9LHsiZW5hYmxlIjp0cnVlLCJ5YXdfdHlwZSI6IkwgJiBSIiwibW9kX3R5cGUiOiJDZW50ZXIiLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzIiOjUsImRlZmVuc2l2ZV9waXRjaF92YWx1ZSI6MCwibW9kX2RtX2xlZnQiOjAsImRlZmVuc2l2ZV95YXdfZGVsYXkiOjQsImRlZmVuc2l2ZSI6dHJ1ZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiT2ZmIiwieWF3X2RlbGF5X3JhbmRvbSI6ZmFsc2UsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MSwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjotOSwieWF3X3JpZ2h0IjoxOSwicGl0Y2hfdHlwZSI6IkRvd24iLCJkZWZlbnNpdmVfcGl0Y2hfc3BlZWQiOjEsImRlZmVuc2l2ZV9waXRjaCI6IkRvd24iLCJ5YXdfcmFuZG9tIjowLCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjo3LCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiSml0dGVyIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMjMsInlhd19kZWxheSI6NCwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJkZWZlc2l2ZV9hYV90eXBlIjoiRm9yY2UiLCJtb2RfZG0iOjM0LCJnc19ib2R5X3NsaWRlciI6MSwicGl0Y2hfdmFsdWUiOjAsImdzX2JvZHlfeWF3X3R5cGUiOiJKaXR0ZXIifSx7ImVuYWJsZSI6dHJ1ZSwieWF3X3R5cGUiOiJEZWxheSIsIm1vZF90eXBlIjoiT2ZmIiwiZGVmZW5zaXZlX3lhd192YWx1ZV8yIjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWUiOjAsIm1vZF9kbV9sZWZ0IjowLCJkZWZlbnNpdmVfeWF3X2RlbGF5Ijo0LCJkZWZlbnNpdmUiOmZhbHNlLCJkZWZlc2l2ZV9hYV9tb2RlX3R5cGUiOiJPZmYiLCJ5YXdfZGVsYXlfcmFuZG9tIjp0cnVlLCJkZWZlbnNpdmVfYWFfc2ludXNfeWF3IjowLCJkZWZlbnNpdmVfYWFfc2ludXNfc3BlZWQiOjEsImRlZmVuc2l2ZV95YXdfdmFsdWVfMSI6MCwieWF3X3JpZ2h0IjozMiwicGl0Y2hfdHlwZSI6IkRvd24iLCJkZWZlbnNpdmVfcGl0Y2hfc3BlZWQiOjEsImRlZmVuc2l2ZV9waXRjaCI6Ik9mZiIsInlhd19yYW5kb20iOjEzLCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMjgsInlhd19kZWxheSI6MywieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJkZWZlc2l2ZV9hYV90eXBlIjoiT2ZmIiwibW9kX2RtIjowLCJnc19ib2R5X3NsaWRlciI6MSwicGl0Y2hfdmFsdWUiOjAsImdzX2JvZHlfeWF3X3R5cGUiOiJKaXR0ZXIifV1d')
 end):depend(enabled)
 
-buttom_default = groups.group_fl:button('Default Preset', function() 
+buttom_default = groups.group_fl:button('Developer Preset', function() 
     config.import('W3sicHJlZGljdF9iaW5kIjpbMSwwLCJ+Il0sImFpcnN0b3AiOlsxLDAsIn4iXSwicHJlZGljdF93ZWFwb25zIjpbIn4iXSwicHJlZGljdF9jb25kaXRpb25zIjpbIn4iXSwiZGVmZW5zaXZlX2ZpeCI6dHJ1ZSwicmVzb2x2ZXJfdHlwZSI6Ij8/PyIsInJlc29sdmVyIjp0cnVlLCJwcmVkaWN0aW9uX3N5c3RlbSI6ZmFsc2UsInByZWRpY3RfdHlwZSI6IkRlZmF1bHQifSx7ImZha2VfbGFnc19hbW91bnQiOiJNYXhpbXVtIiwiZGVmZW5zaXZlX2ZsaWNrX2tleSI6WzEsMCwifiJdLCJtYW51YWxzX21hbmlwdWxhdGlvbnMiOlsiU3RhdGljIiwifiJdLCJrZXlfbGVmdCI6WzEsOTAsIn4iXSwic2FmZV9oZWFkIjpbIkFpcitDIEtuaWZlIiwifiJdLCJmYWtlX2xhZ3MiOnRydWUsImtleV9mcmVlc3RhbmQiOlsxLDAsIn4iXSwieWF3X2Jhc2UiOiJBdCBUYXJnZXRzIiwiZGVmZW5zaXZlX3RpY2tzIjoxLCJkZWZlbnNpdmVfZmxpY2tfdmFsdWUiOjAsImtleV9mb3J3YXJkIjpbMSwwLCJ+Il0sImZha2VfbGFnc19saW1pdCI6MTQsImtleV9yaWdodCI6WzEsODgsIn4iXSwiYWRkb25zIjpbIldhcm11cCBBbnRpLUFpbSIsIkFudGkgQmFja3N0YWIiLCJTYWZlIEhlYWQiLCJFZGdlIFlhdyBvbiBGRCIsIn4iXSwiYWFfc2VsZWN0IjoiTWFpbiIsImZha2VfbGFnc192YXJpYW5jZSI6MTAsImRlZmVuc2l2ZV9mbGlja190aWNrcyI6MSwiZGVmZW5zaXZlX2ZsaWNrX3R5cGUiOiJMZWZ0IiwiZGVmZW5zaXZlX2ZsaWNrIjpmYWxzZX0seyJicmFuZGVkX3dhdGVybWFya19wb3MiOiJCb3R0b20iLCJidXlfYm90X3ByaW1hcnkiOiJBV1AiLCJjcm9zc19pbmQiOnRydWUsImFuaW1hdGlvbiI6dHJ1ZSwibWFudWFsX2luZGljYXRvcnNfdHlwZSI6Ik1vZGVybiIsInRoaXJkX3BlcnNvbl92YWx1ZSI6NTAsImJ1eV9ib3Rfb3RoZXIiOlsiS2V2bGFyIiwiSGVsbWV0IiwiRGVmdXNlIEtpdCIsIkdyZW5hZGUiLCJNb2xvdG92IiwiU21va2UiLCJUYXNlciIsIn4iXSwia2lsbHNheSI6dHJ1ZSwiYW5pbWF0aW9uX2dyb3VuZCI6IlN0YXRpYyIsImZhc3RfbGFkZGVyIjp0cnVlLCJkZWZlbnNpdmVfaW5kaWNhdG9yIjp0cnVlLCJhc3BlY3RyYXRpbyI6ZmFsc2UsImNyb3NzX2luZF9ncmFkaWVudCI6dHJ1ZSwiZnBzX2Jvb3N0Ijp0cnVlLCJtYW51YWxfaW5kaWNhdG9ycyI6dHJ1ZSwiY2xhbl90YWciOnRydWUsImhpdG1hcmtlcl90eXBlIjoiQ2lyY2xlIiwibWFudWFsX2luZGljYXRvcnNfYyI6IiNGRkEwQTBGRiIsIm1hbnVhbF9pbmRpY2F0b3JzX3ZlbG9jaXR5X2MiOiIjRkZBMEEwRkYiLCJoaXRtYXJrZXJfYyI6IiNGRkEwQTBGRiIsImRlZmVuc2l2ZV9pbmRpY2F0b3JfYyI6IiNGRkEwQTBGRiIsImhpdG1hcmtlciI6dHJ1ZSwiemV1c193YXJuaW5nIjp0cnVlLCJtYW51YWxfaW5kaWNhdG9yc192ZWxvY2l0eSI6dHJ1ZSwiYWltYm90X2xvZ3MiOnRydWUsImJyYW5kZWRfd2F0ZXJtYXJrX3Bvc19jIjoiI0ZGQTBBMEZGIiwiY3Jvc3NfaW5kX2MiOiIjRkZBMEEwRkYiLCJidXlfYm90X3NlY29uZGFyeSI6IkZpdmUtc2VuZU5cL1RlYzlcL0NaIiwiYnV5X2JvdCI6ZmFsc2UsImFzcGVjdHJhdGlvX3ZhbHVlIjoxMjUsInRoaXJkX3BlcnNvbiI6ZmFsc2UsImFuaW1hdGlvbl9haXIiOiJTdGF0aWMiLCJ2ZWxvY2l0eV93YXJuaW5nX2MiOiIjRkZBMEEwRkYiLCJsb2dfdHlwZSI6WyJIaXQiLCJNaXNzIiwifiJdLCJ2ZWxvY2l0eV93YXJuaW5nIjp0cnVlfSxbeyJlbmFibGUiOmZhbHNlLCJ5YXdfdHlwZSI6IlN0YXRpYyIsIm1vZF90eXBlIjoiT2ZmIiwiZGVmZW5zaXZlX3lhd192YWx1ZV8yIjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWUiOjAsIm1vZF9kbV9sZWZ0IjowLCJkZWZlbnNpdmVfeWF3X2RlbGF5Ijo0LCJkZWZlbnNpdmUiOmZhbHNlLCJkZWZlc2l2ZV9hYV9tb2RlX3R5cGUiOiJPZmYiLCJ5YXdfZGVsYXlfcmFuZG9tIjpmYWxzZSwiZGVmZW5zaXZlX2FhX3NpbnVzX3lhdyI6MCwiZGVmZW5zaXZlX2FhX3NpbnVzX3NwZWVkIjoxLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzEiOjAsInlhd19yaWdodCI6MCwicGl0Y2hfdHlwZSI6IkRvd24iLCJkZWZlbnNpdmVfcGl0Y2giOiJPZmYiLCJ5YXdfcmFuZG9tIjowLCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjowLCJkZWZlc2l2ZV9hYV90eXBlIjoiT2ZmIiwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJ5YXdfZGVsYXkiOjQsIm1vZF9kbSI6MCwiZ3NfYm9keV9zbGlkZXIiOjAsInBpdGNoX3ZhbHVlIjowLCJnc19ib2R5X3lhd190eXBlIjoiT2ZmIn0seyJlbmFibGUiOnRydWUsInlhd190eXBlIjoiTCAmIFIiLCJtb2RfdHlwZSI6IkNlbnRlciIsImRlZmVuc2l2ZV95YXdfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlIjowLCJtb2RfZG1fbGVmdCI6MCwiZGVmZW5zaXZlX3lhd19kZWxheSI6NCwiZGVmZW5zaXZlIjp0cnVlLCJkZWZlc2l2ZV9hYV9tb2RlX3R5cGUiOiJTaW51cyIsInlhd19kZWxheV9yYW5kb20iOmZhbHNlLCJkZWZlbnNpdmVfYWFfc2ludXNfeWF3IjoxODAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MiwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjowLCJ5YXdfcmlnaHQiOjIzLCJwaXRjaF90eXBlIjoiRG93biIsImRlZmVuc2l2ZV9waXRjaCI6Ik9mZiIsInlhd19yYW5kb20iOjEwLCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6Ik1vZGUiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMzIsImRlZmVzaXZlX2FhX3R5cGUiOiJGb3JjZSIsInlhd19tb2RpZmVyX2RlbGF5X3JhbmRvbSI6ZmFsc2UsImppdHRlcl9kZWxheSI6NCwiZGVmZW5zaXZlX2FhX3NpbnVzX2FtcGxpdHVkZSI6MzYsInlhd19kZWxheSI6NCwibW9kX2RtIjoxNCwiZ3NfYm9keV9zbGlkZXIiOjEsInBpdGNoX3ZhbHVlIjowLCJnc19ib2R5X3lhd190eXBlIjoiSml0dGVyIn0seyJlbmFibGUiOnRydWUsInlhd190eXBlIjoiRGVsYXkiLCJtb2RfdHlwZSI6IkNlbnRlciIsImRlZmVuc2l2ZV95YXdfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlIjowLCJtb2RfZG1fbGVmdCI6MCwiZGVmZW5zaXZlX3lhd19kZWxheSI6NCwiZGVmZW5zaXZlIjpmYWxzZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiT2ZmIiwieWF3X2RlbGF5X3JhbmRvbSI6ZmFsc2UsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MSwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjowLCJ5YXdfcmlnaHQiOjM0LCJwaXRjaF90eXBlIjoiRG93biIsImRlZmVuc2l2ZV9waXRjaCI6Ik9mZiIsInlhd19yYW5kb20iOjEwLCJ5YXdfc3RhdGljIjowLCJkZWZlbnNpdmVfeWF3X3NwZWVkIjoxLCJtb2RfZG1fcmlnaHQiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6IkJ1aWxkZXIiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMjgsImRlZmVzaXZlX2FhX3R5cGUiOiJPZmYiLCJ5YXdfbW9kaWZlcl9kZWxheV9yYW5kb20iOmZhbHNlLCJqaXR0ZXJfZGVsYXkiOjQsImRlZmVuc2l2ZV9hYV9zaW51c19hbXBsaXR1ZGUiOjAsInlhd19kZWxheSI6MiwibW9kX2RtIjoxNCwiZ3NfYm9keV9zbGlkZXIiOjEsInBpdGNoX3ZhbHVlIjowLCJnc19ib2R5X3lhd190eXBlIjoiU3RhdGljIn0seyJlbmFibGUiOnRydWUsInlhd190eXBlIjoiTCAmIFIiLCJtb2RfdHlwZSI6Ik9mZiIsImRlZmVuc2l2ZV95YXdfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlIjowLCJtb2RfZG1fbGVmdCI6MCwiZGVmZW5zaXZlX3lhd19kZWxheSI6NCwiZGVmZW5zaXZlIjp0cnVlLCJkZWZlc2l2ZV9hYV9tb2RlX3R5cGUiOiJPZmYiLCJ5YXdfZGVsYXlfcmFuZG9tIjpmYWxzZSwiZGVmZW5zaXZlX2FhX3NpbnVzX3lhdyI6MCwiZGVmZW5zaXZlX2FhX3NpbnVzX3NwZWVkIjoxLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzEiOjAsInlhd19yaWdodCI6MzYsInBpdGNoX3R5cGUiOiJEb3duIiwiZGVmZW5zaXZlX3BpdGNoIjoiUmFuZG9tIiwieWF3X3JhbmRvbSI6MzUsInlhd19zdGF0aWMiOjAsImRlZmVuc2l2ZV95YXdfc3BlZWQiOjEsIm1vZF9kbV9yaWdodCI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlXzIiOjAsImRlZmVuc2l2ZV95YXciOiJSYW5kb20iLCJkZWZlc2l2ZV9hYV9tb2RlIjoiQnVpbGRlciIsImRlZmVuc2l2ZV9waXRjaF9kZWxheSI6NCwieWF3X2xlZnQiOi00OCwiZGVmZXNpdmVfYWFfdHlwZSI6IkZvcmNlIiwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJ5YXdfZGVsYXkiOjQsIm1vZF9kbSI6MCwiZ3NfYm9keV9zbGlkZXIiOjEsInBpdGNoX3ZhbHVlIjowLCJnc19ib2R5X3lhd190eXBlIjoiSml0dGVyIn0seyJlbmFibGUiOnRydWUsInlhd190eXBlIjoiRGVsYXkiLCJtb2RfdHlwZSI6IkNlbnRlciIsImRlZmVuc2l2ZV95YXdfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlIjowLCJtb2RfZG1fbGVmdCI6MCwiZGVmZW5zaXZlX3lhd19kZWxheSI6NCwiZGVmZW5zaXZlIjp0cnVlLCJkZWZlc2l2ZV9hYV9tb2RlX3R5cGUiOiJPZmYiLCJ5YXdfZGVsYXlfcmFuZG9tIjpmYWxzZSwiZGVmZW5zaXZlX2FhX3NpbnVzX3lhdyI6MCwiZGVmZW5zaXZlX2FhX3NpbnVzX3NwZWVkIjoxLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzEiOi0xOCwieWF3X3JpZ2h0IjozMCwicGl0Y2hfdHlwZSI6IkRvd24iLCJkZWZlbnNpdmVfcGl0Y2giOiJLYXpha2giLCJ5YXdfcmFuZG9tIjoxMCwieWF3X3N0YXRpYyI6MCwiZGVmZW5zaXZlX3lhd19zcGVlZCI6MSwibW9kX2RtX3JpZ2h0IjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3lhdyI6IlNwaW4iLCJkZWZlc2l2ZV9hYV9tb2RlIjoiQnVpbGRlciIsImRlZmVuc2l2ZV9waXRjaF9kZWxheSI6NCwieWF3X2xlZnQiOi0yNSwiZGVmZXNpdmVfYWFfdHlwZSI6IkZvcmNlIiwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJ5YXdfZGVsYXkiOjIsIm1vZF9kbSI6OSwiZ3NfYm9keV9zbGlkZXIiOjEsInBpdGNoX3ZhbHVlIjowLCJnc19ib2R5X3lhd190eXBlIjoiSml0dGVyIn0seyJlbmFibGUiOnRydWUsInlhd190eXBlIjoiRGVsYXkiLCJtb2RfdHlwZSI6IjMtV2F5IiwiZGVmZW5zaXZlX3lhd192YWx1ZV8yIjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWUiOjAsIm1vZF9kbV9sZWZ0IjotMTgsImRlZmVuc2l2ZV95YXdfZGVsYXkiOjQsImRlZmVuc2l2ZSI6dHJ1ZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiU2ludXMiLCJ5YXdfZGVsYXlfcmFuZG9tIjp0cnVlLCJkZWZlbnNpdmVfYWFfc2ludXNfeWF3Ijo4MSwiZGVmZW5zaXZlX2FhX3NpbnVzX3NwZWVkIjo2LCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzEiOjAsInlhd19yaWdodCI6MzIsInBpdGNoX3R5cGUiOiJEb3duIiwiZGVmZW5zaXZlX3BpdGNoIjoiT2ZmIiwieWF3X3JhbmRvbSI6MTAsInlhd19zdGF0aWMiOjAsImRlZmVuc2l2ZV95YXdfc3BlZWQiOjEsIm1vZF9kbV9yaWdodCI6MTQsImRlZmVuc2l2ZV9waXRjaF92YWx1ZV8yIjowLCJkZWZlbnNpdmVfeWF3IjoiT2ZmIiwiZGVmZXNpdmVfYWFfbW9kZSI6Ik1vZGUiLCJkZWZlbnNpdmVfcGl0Y2hfZGVsYXkiOjQsInlhd19sZWZ0IjotMjgsImRlZmVzaXZlX2FhX3R5cGUiOiJGb3JjZSIsInlhd19tb2RpZmVyX2RlbGF5X3JhbmRvbSI6dHJ1ZSwiaml0dGVyX2RlbGF5Ijo2LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjoxMTksInlhd19kZWxheSI6NiwibW9kX2RtIjotMTQsImdzX2JvZHlfc2xpZGVyIjoxLCJwaXRjaF92YWx1ZSI6MCwiZ3NfYm9keV95YXdfdHlwZSI6IkppdHRlciJ9LHsiZW5hYmxlIjp0cnVlLCJ5YXdfdHlwZSI6IkwgJiBSIiwibW9kX3R5cGUiOiJDZW50ZXIiLCJkZWZlbnNpdmVfeWF3X3ZhbHVlXzIiOjAsImRlZmVuc2l2ZV9waXRjaF92YWx1ZSI6MCwibW9kX2RtX2xlZnQiOjAsImRlZmVuc2l2ZV95YXdfZGVsYXkiOjQsImRlZmVuc2l2ZSI6dHJ1ZSwiZGVmZXNpdmVfYWFfbW9kZV90eXBlIjoiT2ZmIiwieWF3X2RlbGF5X3JhbmRvbSI6ZmFsc2UsImRlZmVuc2l2ZV9hYV9zaW51c195YXciOjAsImRlZmVuc2l2ZV9hYV9zaW51c19zcGVlZCI6MSwiZGVmZW5zaXZlX3lhd192YWx1ZV8xIjowLCJ5YXdfcmlnaHQiOjI1LCJwaXRjaF90eXBlIjoiRG93biIsImRlZmVuc2l2ZV9waXRjaCI6IlVwIiwieWF3X3JhbmRvbSI6MTAsInlhd19zdGF0aWMiOjAsImRlZmVuc2l2ZV95YXdfc3BlZWQiOjEsIm1vZF9kbV9yaWdodCI6MCwiZGVmZW5zaXZlX3BpdGNoX3ZhbHVlXzIiOjAsImRlZmVuc2l2ZV95YXciOiIxODAiLCJkZWZlc2l2ZV9hYV9tb2RlIjoiQnVpbGRlciIsImRlZmVuc2l2ZV9waXRjaF9kZWxheSI6NCwieWF3X2xlZnQiOi0yMywiZGVmZXNpdmVfYWFfdHlwZSI6IkZvcmNlIiwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJ5YXdfZGVsYXkiOjQsIm1vZF9kbSI6NywiZ3NfYm9keV9zbGlkZXIiOi0xLCJwaXRjaF92YWx1ZSI6MCwiZ3NfYm9keV95YXdfdHlwZSI6IkppdHRlciJ9LHsiZW5hYmxlIjp0cnVlLCJ5YXdfdHlwZSI6IkwgJiBSIiwibW9kX3R5cGUiOiJTa2l0dGVyIiwiZGVmZW5zaXZlX3lhd192YWx1ZV8yIjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWUiOjAsIm1vZF9kbV9sZWZ0IjowLCJkZWZlbnNpdmVfeWF3X2RlbGF5Ijo0LCJkZWZlbnNpdmUiOnRydWUsImRlZmVzaXZlX2FhX21vZGVfdHlwZSI6Ik9mZiIsInlhd19kZWxheV9yYW5kb20iOmZhbHNlLCJkZWZlbnNpdmVfYWFfc2ludXNfeWF3IjowLCJkZWZlbnNpdmVfYWFfc2ludXNfc3BlZWQiOjEsImRlZmVuc2l2ZV95YXdfdmFsdWVfMSI6MCwieWF3X3JpZ2h0IjoyMSwicGl0Y2hfdHlwZSI6IkRvd24iLCJkZWZlbnNpdmVfcGl0Y2giOiJPZmYiLCJ5YXdfcmFuZG9tIjoyMCwieWF3X3N0YXRpYyI6MCwiZGVmZW5zaXZlX3lhd19zcGVlZCI6MSwibW9kX2RtX3JpZ2h0IjowLCJkZWZlbnNpdmVfcGl0Y2hfdmFsdWVfMiI6MCwiZGVmZW5zaXZlX3lhdyI6Ik9mZiIsImRlZmVzaXZlX2FhX21vZGUiOiJCdWlsZGVyIiwiZGVmZW5zaXZlX3BpdGNoX2RlbGF5Ijo0LCJ5YXdfbGVmdCI6LTE2LCJkZWZlc2l2ZV9hYV90eXBlIjoiT2ZmIiwieWF3X21vZGlmZXJfZGVsYXlfcmFuZG9tIjpmYWxzZSwiaml0dGVyX2RlbGF5Ijo0LCJkZWZlbnNpdmVfYWFfc2ludXNfYW1wbGl0dWRlIjowLCJ5YXdfZGVsYXkiOjQsIm1vZF9kbSI6NSwiZ3NfYm9keV9zbGlkZXIiOi0xLCJwaXRjaF92YWx1ZSI6MCwiZ3NfYm9keV95YXdfdHlwZSI6IkppdHRlciJ9XV0=')
 end):depend(enabled)
 --[[
@@ -1582,7 +1576,7 @@ local function crosshair_indicators()
     local lp = entity.get_local_player()
     if lp == nil then return end
     if not entity.is_alive(lp) then return end
-    local ind_size = renderer.measure_text('cb', 'sexcord')
+    local ind_size = renderer.measure_text('cb', 'Nyctophobia')
     local scpd = entity.get_prop(lp, 'm_bIsScoped') == 1
     scoped_space = math.lerp(scoped_space, scpd and 20 or 0, 20)
     local condition = 'SHARED'
@@ -1606,9 +1600,9 @@ local function crosshair_indicators()
     local r, g, b, a = 255, 255, 255, 255
 
     if lua_ui.other.cross_ind_gradient:get() then
-        text_fade_animation(center[1] + scoped_space, center[2] + 25, -1, {r=r1, g=g1, b=b1, a=255}, {r=r2, g=g2, b=b2, a=255}, new_check and string.upper('SEXCORD') or 'SEXCORD', main_font)
+        text_fade_animation(center[1] + scoped_space, center[2] + 25, -1, {r=r1, g=g1, b=b1, a=255}, {r=r2, g=g2, b=b2, a=255}, new_check and string.upper('Nyctophobia') or 'Nyctophobia', main_font)
     else
-        renderer.text(center[1] + scoped_space, center[2] + 25, r2, g2, b2, 255, main_font, 0, 'SEXCORD')
+        renderer.text(center[1] + scoped_space, center[2] + 25, r2, g2, b2, 255, main_font, 0, 'Nyctophobia')
     end
 
     renderer.text(center[1] + scoped_space, center[2] + 25 + (spaceind), 255, 255, 255, 255, main_font, 0, condition)
@@ -1994,37 +1988,37 @@ end)
 
 local ct_anim = {
     '                  ',
-    '                 s',
-    '                se',
-    '               sex',
-    '              sexc',
-    '             sexco',
-    '            sexcor',
-    '           sexcord',
-    '          sexcord ',
-    '         sexcord  ',
-    '        sexcord   ',
-    '       sexcord    ',
-    '      sexcord     ',
-    '     sexcord      ',
-    '    sexcord       ',
-    '   sexcord        ',
-    '  sexcord         ',
-    ' sexcord          ',
-    'sexcord           ',
-    'excord            ',
-    'xcord             ',
-    'cord              ',
-    'ord               ',
-    'rd                ',
-    'd                 ',
+    '                 N',
+    '                NY',
+    '               NYC',
+    '              NYCT',
+    '             NYCTO',
+    '            NYTCOP',
+    '           NYCTOPH',
+    '          NYCTOPHO ',
+    '         NYCTOPHOB  ',
+    '        NYCTOPHOBI   ',
+    '       NYCTOPHOBIA    ',
+    '      NYCTOPHOBIA     ',
+    '     NYCTOPHOBIA      ',
+    '    NYCTOPHOBIA       ',
+    '   NYCTOPHOBIA        ',
+    '  NYCTOPHOBIA         ',
+    ' NYCTOPHOBIA          ',
+    'NYCTOPHOBIA           ',
+    'YCTOPHOBIA            ',
+    'CTOPHOBIA             ',
+    'TOPHOBIA              ',
+    'OPHOBIA              ',
+    'PHOBIA                ',
+    'HOBIA            ',
 }
 
 ct_animation = function()
 if client.latency() == nil then return end
     local set_clan_tag = math.floor(math.fmod((globals.tickcount() + (client.latency(0) / globals.tickinterval())) / 22, #ct_anim + 1) + 1)
     if entity.get_prop(entity.get_game_rules(),'m_gamePhase') == 5 or entity.get_prop(entity.get_game_rules(),'m_gamePhase') == 4 then
-        return ct_anim['sexcord']
+        return ct_anim['nyctophobia']
     else
         return ct_anim[set_clan_tag]
     end 
@@ -2193,7 +2187,7 @@ end
 client.set_event_callback('aim_hit', function(e)
     if lua_ui.main.main_checkbox:get() and lua_ui.other.aimbot_logs:get() and lua_ui.other.log_type:get('Hit') then
 	    local group = hitgroup_names[e.hitgroup + 1] or "?"
-	    client.color_log(124, 252, 100, "SexCord ~ \0")
+	    client.color_log(124, 252, 100, "Nyctophobia ~ \0")
 	    client.color_log(200, 200, 200, "Hit\0")
 	    client.color_log(124, 252, 100, string.format(" %s\0", entity.get_player_name(e.target)))
 	    client.color_log(200, 200, 200, " in the\0")
@@ -2210,7 +2204,7 @@ end)
 client.set_event_callback("aim_miss", function(e)
     if lua_ui.main.main_checkbox:get() and lua_ui.other.aimbot_logs:get() and lua_ui.other.log_type:get('Miss') then
 	    local group = hitgroup_names[e.hitgroup + 1] or "?"
-	    client.color_log(255, 100, 100, "SexCord ~ \0")
+	    client.color_log(255, 100, 100, "Nyctophobia ~ \0")
 	    client.color_log(200, 200, 200, "Missed shot in\0")
 	    client.color_log(255, 100, 100, string.format(" %s\'s\0", entity.get_player_name(e.target)))
 	    client.color_log(255, 100, 100, string.format(" %s\0", group))
@@ -2232,7 +2226,7 @@ client.set_event_callback('player_hurt', function(e)
             local target_id = client.userid_to_entindex(e.userid)
 		    local target_name = entity.get_player_name(target_id)
 
-		    client.color_log(124, 252, 100, "SexCord ~ \0")
+		    client.color_log(124, 252, 100, "Nyctophobia ~ \0")
 		    client.color_log(200, 200, 200, string.format("%s\0", weapon_to_verb[e.weapon]))
 		    client.color_log(124, 252, 100, string.format(" %s\0", target_name))
 		    client.color_log(200, 200, 200, " for\0")
@@ -2467,6 +2461,5 @@ client.set_event_callback('shutdown', function()
     cvar.cam_idealdist:set_int(150)
     cvar.cl_csm_shadows:set_int(1)
 end)
-
 
 
